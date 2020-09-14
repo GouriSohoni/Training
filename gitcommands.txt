@@ -1,0 +1,40 @@
+az extension add --name azure-devops 
+
+git init 
+
+git config --global credential.helper wincred 
+
+git config --global user.name "<name>" 
+
+git config --global user.email "<email>" 
+
+dotnet new console
+
+git add .
+
+git status 
+
+git commit -m "Demo of git" 
+
+git branch feature1 
+
+git checkout feature1 
+
+git  branch --list 
+
+git add .
+
+git commit -m "<messge>" 
+
+git checkout master 
+
+git merge feature1 
+
+git branch --delete feature1 
+
+az login 
+
+git remote add origin <url to remote origin>
+
+git push --set-upstream origin master 
+
