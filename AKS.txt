@@ -1,0 +1,18 @@
+create AKS
+
+az aks create --resource-group <RG name> --name <AKS name>  --node-count 1 --enable-addons monitoring  --generate-ssh-keys
+
+To configure kubectl to connect to your Kubernetes cluster
+az aks get-credentials --resource-group <RG name> --name <AKS name>
+
+kubectl get nodes
+
+create yml file or upload
+
+file in git hub
+
+deploy app by
+kubectl apply -f azure-vote.yaml
+
+monitor progress by
+kubectl get service azure-vote-front --watch
