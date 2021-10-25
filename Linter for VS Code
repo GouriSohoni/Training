@@ -1,0 +1,20 @@
+
+ add <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+rule sets file get from 
+https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers.CodeFixes/rulesets/StyleCopAnalyzersDefault.ruleset
+
+propertygroup
+<CodeAnalysisRuleSet>$(SolutionDir).stylecop/stylecop.ruleset.xml</CodeAnalysisRuleSet>
+
+add stylecop.json from 
+https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json
+
+name this file as stylecop.schema.json
+and add minimal stylecop.json as folows
+{
+    "$schema": "./stylecop.schema.json",
+    "settings": {}
+}
+
+enable Omnishart and enable roslyn
